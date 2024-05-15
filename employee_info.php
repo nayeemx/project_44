@@ -7,15 +7,22 @@ include('connection.php');
 
 if (isset($_POST['save'])) {
   $employee_name     = $_POST['employee_name'];
+  $employee_email     = $_POST['employee_email'];
+  $employee_phone_no     = $_POST['employee_phone_no'];
+
+  // echo $employee_name. '<br>' . $employee_email . '<br>' . $employee_phone_no;
+  // die;
 
 
-  $sql = "insert into employee_info(employee_name) values ('$employee_name')";
+  $sql = "insert into employee_info(employee_name, employee_email, employee_phone_no) values ('$employee_name', '$employee_email', '$employee_phone_no')";
+
+  // echo $sql; die;
 
   $result = $conn->query($sql);
 
   if ($result == 1) {
     echo "Successfully Inserted!";
-    //header("Location: employee_list_view.php");
+    // header("Location: employee_list_view.php");
   }
 }
 ?>

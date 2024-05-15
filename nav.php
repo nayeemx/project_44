@@ -23,6 +23,7 @@
               </a>
             <ul class="sub">
               <li><a href="employee_info.php">Employee Information</a></li>
+              <li><a href="student_info.php">Students Information</a></li>
               
             </ul>
           </li>
